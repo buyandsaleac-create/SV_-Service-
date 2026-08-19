@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SV_Service</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#101827;
+color:white;
+text-align:center;
+}
+.header{
+padding:25px;
+background:#182235;
+}
+.logo{
+font-size:32px;
+font-weight:bold;
+}
+.card{
+background:#1b2638;
+margin:16px;
+padding:20px;
+border-radius:16px;
+}
+input{
+width:90%;
+box-sizing:border-box;
+padding:13px;
+margin:7px;
+border:0;
+border-radius:9px;
+font-size:16px;
+}
+button{
+width:90%;
+padding:14px;
+margin:7px;
+border:0;
+border-radius:10px;
+font-size:17px;
+font-weight:bold;
+}
+.green{background:#20c978;color:white}
+.blue{background:#2878ff;color:white}
+.orange{background:#f5a623}
+.purple{background:#a855f7;color:white}
+.hidden{display:none}
+.price{font-size:32px;font-weight:bold}
+#result{margin:15px;font-size:20px}
+.small{color:#9ca8ba;font-size:13px}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div class="logo">SV_Service</div>
+<div>Aviator & Crash Analysis</div>
+</div>
+
+<div id="login" class="card">
+
+<h2>🔐 User Login</h2>
+
+<input id="username" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button class="green" onclick="login()">LOGIN</button>
+
+<p id="loginMsg" class="small"></p>
+
+</div>
+
+
+<div id="payment" class="card hidden">
+
+<h2>💎 Premium Access</h2>
+
+<p>1 Day Premium</p>
+
+<div class="price">Rs.159</div>
+
+<button class="purple" onclick="pay()">
+💳 PAY BY CARD
+</button>
+
+<p id="payMsg" class="small"></p>
+
+</div>
+
+
+<div id="app" class="hidden">
+
+<div class="card">
+
+<h2>🎯 Select Game</h2>
+
+<button class="orange"
+onclick="game('Aviator')">
+✈️ Aviator
+</button>
+
+<button class="blue"
+onclick="game('Crash')">
+🚀 Crash
+</button>
+
+<p id="gameMsg"></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>🔢 Play ID</h2>
+
+<input id="playid"
+placeholder="Enter Play ID">
+
+<h2>📊 Previous Results</h2>
+
+<input id="results"
+placeholder="1.20, 1.50, 2.10, 3.40">
+
+<button class="green" onclick="analyze()">
+🔍 CHECK SIGNAL
+</button>
+
+<div id="result">
+Waiting...
+  </div>
